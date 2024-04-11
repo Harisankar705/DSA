@@ -30,7 +30,7 @@ class LinkedList
             current.next=newNode
         }
     }
-    isPalindrome(data)
+    isPalindrome()
     {
         let current=this.head
         let stack=[]

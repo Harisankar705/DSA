@@ -38,3 +38,4 @@ linkedList.append(3);
 linkedList.append(4);
 
 linkedList.printReverse();
+    
