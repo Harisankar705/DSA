@@ -1,67 +1,58 @@
-class node
-{
-    constructor(data)
-    {
-        this.data=data
-        this.next=null
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
     }
 }
 
-class LinkedList
-{
-    constructor()
-    {
-        this.head=null
+class LinkedList {
+    constructor() {
+        this.head = null;
     }
-    append(data)
-    {
-        const newNode=new node(data)
-        if(!this.head)
-        {
-            this.head=newNode
-        }
-        else
-        {
-            let current=this.head;
-            while(current.next)
-            {
-                current=current.next
+
+    append(data) {
+        const newNode = new Node(data);
+        if (!this.head) {
+            this.head = newNode;
+        } else {
+            let current = this.head;
+            while (current.next) {
+                current = current.next;
             }
-            current.next=newNode
+            current.next = newNode;
         }
     }
-    isPalindrome()
-    {
-        let current=this.head
-        let stack=[]
-        while(current)
-        {
-            stack.push(current.data)
-            current=current.next
+
+    isPalindrome() {
+        let current = this.head;
+        const arr = [];
+
+        // Traverse the linked list and store each node's value in the array
+        while (current) {
+            arr.push(current.data);
+            current = current.next;
         }
-        current=this.head
-        while(current)
-        {
-            if(current.data!==stack.pop())
-            {
-            return false
+
+        // Use two pointers to check if the array is a palindrome
+        let start = 0;
+        let end = arr.length - 1;
+        while (start < end) {
+            if (arr[start] !== arr[end]) {
+                return false; // Not a palindrome
             }
-            current=current.next
-        
+            start++;
+            end--;
         }
-        return true
+        return true; // Palindrome
     }
 }
 
-const linkedlist=new LinkedList()
-linkedlist.append(1)
-linkedlist.append(2)
-linkedlist.append(1)
-if(linkedlist.isPalindrome())
-{
-    console.log("The list is a pal")
-}
-else
-{
-    console.log("NO pal");
-}
+// Example usage:
+const linkedList = new LinkedList();
+linkedList.append(1);
+linkedList.append(2);
+linkedList.append(3);
+linkedList.append(2);
+linkedList.append(1);
+
+console.log("Is Palindrome:", linkedList.isPalindrome()); // Output: true
