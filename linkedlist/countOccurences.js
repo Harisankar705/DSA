@@ -28,31 +28,29 @@ class LinkedList
                 current=current.next
             }
             current.next=newNode
+
+            
         }
     }
-        printAsc()
+    findOccurences(target)
+    {
+        let count=0
+        let current=this.head
+        while(current)
         {
-            let current=this.head
-            const elements=[]
-            while(current)
+            if(current.data===target)
             {
-                elements.push(current.data)
-                current=current.next
+                count++
             }
-            elements.sort((a,b)=>b-a)
-                    console.log(elements.join()); // Print the sorted elements
-
+            current=current.next
         }
-        
-        
+        return count
     }
-    
- 
-    
-    
+}
 
-   const linkedList=new LinkedList()
-    linkedList.append(1)
-    linkedList.append(2)
-    linkedList.append(3)
-    linkedList.printAsc()
+const ll=new LinkedList()
+ll.append(2)
+ll.append(2)
+ll.append(2)
+const count=ll.findOccurences(2)
+console.log(count);

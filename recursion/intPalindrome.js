@@ -1,13 +1,11 @@
-function isPalindrome(str) {
-    const numStr = String(str);
-    if (numStr.length <= 1) {
-        return true;
+function reverseString(num)
+{
+    const numStr=String(num)
+    if(numStr.length<=1)
+    {
+        return numStr
     }
-    if (numStr[0] !== numStr[numStr.length - 1]) {
-        return false;
-    }
-    return isPalindrome(numStr.slice(1, -1)); // Pass the substring to the recursive call
+    return reverseString(numStr.substring(1))+numStr[0]
 }
-
-console.log(isPalindrome(121)); // Output: true
-    
+const str=123
+console.log(reverseString(str))

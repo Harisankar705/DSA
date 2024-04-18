@@ -1,10 +1,10 @@
-function reverseArray(str)
+function reverseArray(arr)
 {
-    if(str.length<=1)
+    if(arr.length<=1)
     {
-        return str
+        return arr
     }
-    return [str[str.length-1]].concat(reverseArray(str.slice(0,str.length-1)))
+    return reverseArray(arr.slice(1)).concat(arr[0])
 }
-const arr=[1,2,3]
+const arr=[1,2,3,4,5]
 console.log(reverseArray(arr))

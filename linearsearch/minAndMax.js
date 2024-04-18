@@ -20,4 +20,8 @@ function findMinAndMax(arr)
     return{max:max,min:min}
 }
 const arr=[1,3,2,4,3,3,123,2,0]
+/* The `console.log(findMinAndMax(arr))` statement is calling the `findMinAndMax` function with the
+`arr` array as an argument and then logging the returned object to the console. The `findMinAndMax`
+function takes an array as input and returns an object with the maximum and minimum values found in
+the array. */
 console.log(findMinAndMax(arr))

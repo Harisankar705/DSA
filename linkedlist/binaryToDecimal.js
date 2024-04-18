@@ -26,33 +26,29 @@ class LinkedList
             while(current.next)
             {
                 current=current.next
+                
             }
             current.next=newNode
         }
     }
-        printAsc()
+
+    binaryToDecimal()
+    {
+        let decimal=0
+        let current=this.head
+        let power=0
+        while(current)
         {
-            let current=this.head
-            const elements=[]
-            while(current)
-            {
-                elements.push(current.data)
-                current=current.next
-            }
-            elements.sort((a,b)=>b-a)
-                    console.log(elements.join()); // Print the sorted elements
-
+            decimal+=current.data*Math.pow(2,power)
+            power++
+            current=current.next
         }
-        
-        
+        return decimal
     }
-    
- 
-    
-    
-
-   const linkedList=new LinkedList()
-    linkedList.append(1)
-    linkedList.append(2)
-    linkedList.append(3)
-    linkedList.printAsc()
+}
+    const binarylist=new LinkedList()
+    binarylist.append(1)
+    binarylist.append(0)
+    binarylist.append(1)
+    binarylist.append(0)
+    console.log("Decimal equivalent",binarylist.binaryToDecimal())
