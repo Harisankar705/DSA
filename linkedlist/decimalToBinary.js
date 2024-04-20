@@ -9,37 +9,38 @@ class LinkedList {
     constructor() {
         this.head = null;
     }
-    
+
     prepend(data) {
         const newNode = new Node(data);
         newNode.next = this.head;
         this.head = newNode;
     }
-    
+
     decimalToBinary(decimal) {
         if (decimal === 0) {
             this.prepend(0);
-        } else {
-            while (decimal > 0) {
-                const remainder = decimal % 2;
-                this.prepend(remainder);
-                decimal = Math.floor(decimal / 2);
-            }
+            return;
+         }
+
+        while (decimal > 0) {
+            const remainder = decimal % 2;
+            this.prepend(remainder);
+            decimal = Math.floor(decimal / 2);
         }
     }
-    
+
     display() {
         let current = this.head;
-        let binaryStr = '';
         while (current) {
-            binaryStr += current.data;
+            console.log(current.data);
             current = current.next;
         }
-        return binaryStr;
     }
 }
 
-const decimalNumber = 21;
+// Example usage:
+const decimalNumber = 5; // Example decimal number
 const binaryList = new LinkedList();
 binaryList.decimalToBinary(decimalNumber);
-console.log(binaryList.display()); // Output: 10101
+console.log("Binary representation of", decimalNumber, "is:");
+binaryList.display(); // Output: Binary representation of 10 is: 1 0 1 0
