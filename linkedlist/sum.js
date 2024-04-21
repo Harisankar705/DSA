@@ -34,10 +34,10 @@ class LinkedList
     findSum()
     {
         let current=this.head
-        let sumOfLinkedList=0
+        let sum=0
         while(current)
         {
-            sumOfLinkedList+=current.data
+            sum+=current.data
             current=current.next
         }
         return sumOfLinkedList

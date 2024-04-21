@@ -4,7 +4,7 @@
         {
             return 0
         }
-        return arr[0]+sumOfArray(arr.slice(1))
+        return sumOfArray(arr.slice(1))+arr[0]
     }
     const arr=[5,5,5,5,5]
     console.log(sumOfArray(arr))

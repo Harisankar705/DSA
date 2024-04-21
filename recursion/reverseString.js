@@ -4,6 +4,6 @@ function reverseString(str)
     {
         return str
     }
-    return reverseString(str.substring(1))+str[0]
+    return reverseString(str.slice(1))+str[0]
 }
 console.log(reverseString('hari'))  

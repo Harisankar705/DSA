@@ -1,11 +1,16 @@
-function reverseString(num)
+function integerPalindrome(str)
 {
-    const numStr=String(num)
+    const numStr=String(str)
     if(numStr.length<=1)
     {
-        return numStr
+        return true
     }
-    return reverseString(numStr.substring(1))+numStr[0]
+    if(numStr[0]!==numStr[numStr.length-1])
+    {
+        return false
+    }
+    return integerPalindrome(numStr.slice(1,-1))
 }
-const str=123
-console.log(reverseString(str))
+
+const num=121
+console.log(integerPalindrome(num))

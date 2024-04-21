@@ -52,8 +52,8 @@ class LinkedList {
 const linkedlist = new LinkedList();
 linkedlist.append(1);
 linkedlist.append(2);
-linkedlist.append(1);
 linkedlist.append(3);
+linkedlist.append(4);
 console.log("Linked list before deletion:");
 linkedlist.display();
 linkedlist.removeValue(1);
