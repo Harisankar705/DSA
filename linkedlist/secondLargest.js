@@ -70,3 +70,6 @@ linkedList.append(2);
 linkedList.append(13);
 const secondLargest=linkedList.findSecondLargest()
 console.log(secondLargest)
+
+
+

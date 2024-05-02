@@ -29,6 +29,20 @@ class LinkedList {
             console.log(node.data);
         }
     }
+
+    //iterative approach
+    // reverseLinkedList()
+    // {
+    //     let current=this.head
+    //     let prev=null
+    //     while(current!==null)
+    //     {
+    //         const newNode=current.next
+    //         current.next=prev
+    //         prev=current
+    //         current=newNode
+    //     }
+    // }
 }
 
 const linkedList = new LinkedList();

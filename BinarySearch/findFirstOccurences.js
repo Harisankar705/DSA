@@ -25,4 +25,4 @@ function findFirstOccurences(arr,target)
 }
 
 const arr=[1,2,3,2,1,2]
-console.log(findFirstOccurences(arr,2))
+console.log(findFirstOccurences(arr,1))

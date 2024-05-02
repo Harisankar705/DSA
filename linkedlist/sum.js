@@ -40,7 +40,7 @@ class LinkedList
             sum+=current.data
             current=current.next
         }
-        return sumOfLinkedList
+        return sum
     }
 
 }

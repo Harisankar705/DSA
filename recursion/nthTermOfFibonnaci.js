@@ -13,3 +13,4 @@ function fibonacci(n) {
 // Example usage:
 const n = 6;
 console.log(`The ${n}th term of the Fibonacci sequence is:`, fibonacci(n)); // Output: The 6th term of the Fibonacci sequence is: 8
+    

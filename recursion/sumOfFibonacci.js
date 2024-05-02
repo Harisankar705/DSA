@@ -9,3 +9,4 @@ function sumOfFibonanci(limit,fibPrev=0,fibCurr=1,sum=0)
 }
 console.log(sumOfFibonanci(10)); // Output: 23 (1 + 1 + 2 + 3 + 5 + 8 = 20)
 
+        

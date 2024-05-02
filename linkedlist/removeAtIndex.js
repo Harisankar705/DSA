@@ -40,14 +40,11 @@ removeAtIndex(index) {
         current = current.next;
         count++;
     }
-    if (!current) {
-        console.log("Index out of range");
-        return;
-    }
+
     prev.next = current.next;
 }
     
-
+    
     // Function to display the linked list
     display() {
         let current = this.head;

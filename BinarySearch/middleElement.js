@@ -2,8 +2,8 @@ function findMiddle(arr)
 {
     let left=0
     let right=arr.length-1
-    return Math.floor((left+right)/2)
+    let middle=Math.floor((left+right)/2)
+    return arr[middle]
 }
-
-const arr=[1,2,3,4,5,6,7]
-console.log(findMiddle(arr))    
+const arr=[1,2,3,4,5]
+console.log(findMiddle(arr))
