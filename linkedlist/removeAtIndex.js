@@ -24,7 +24,6 @@ class LinkedList {
         current.next = newNode;
     }
 
-    // Function to remove a node at a specified index
    // Function to remove a node at a specified index
 removeAtIndex(index) {
     if (index < 0) return; // Invalid index
