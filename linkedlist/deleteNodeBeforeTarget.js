@@ -1,71 +1,56 @@
-class Node
-{
-    constructor(data)
-    {
-        this.data=data
-        this.next=null
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
     }
 }
 
-class LinkedList
-{
-    constructor()
-    {
-        this.head=null
+class LinkedList {
+    constructor() {
+        this.head = null;
     }
-    append(data)
-    {
-        const newNode=new Node(data)
-        if(!this.head)
-        {
-            this.head=newNode
-        }
-        else
-        {
-            let current=this.head
-            while(current.next)
-            {
-                current=current.next
+    append(data) {
+        const newNode = new Node(data);
+        if (!this.head) {
+            this.head = newNode;
+        } else {
+            let current = this.head;
+            while (current.next) {
+                current = current.next;
             }
-            current.next=newNode
+            current.next = newNode;
         }
     }
-    deleteNodeBeforeTarget(target)
-    {
-        if(!this.head )
-        {
-            return
+    deleteNodeBeforeTarget(target) {
+        if (!this.head || !this.head.next) {
+            return; // Nothing to delete or only one node
         }
-        if(this.head.data===target)
-        {
-            return
+        if (this.head.next.data === target) {
+            this.head = this.head.next; // If the target is the second node, delete the first node
+            return;
         }
 
-        let current=this.head
-        while(current.next && current.next.data!==target)
-        {
-            if(current.next.next && current.next.next.data===target)
-            {
-                current.next=current.next.next
-                return
+        let current = this.head;
+        while (current.next && current.next.data !== target) {
+            if (current.next.next && current.next.next.data === target) {
+                current.next = current.next.next;
+                return;
             }
-            current=current.next
+            current = current.next;
         }
     }
-    display()
-    {
-        let current=this.head
-        while(current)
-        {
-            console.log(current.data)
-            current=current.next
+    display() {
+        let current = this.head;
+        while (current) {
+            console.log(current.data);
+            current = current.next;
         }
     }
 }
 
-const ll=new LinkedList()
-ll.append(1)
-ll.append(2)
-ll.append(3)
-ll.deleteNodeBeforeTarget(3)
-ll.display()
+const ll = new LinkedList();
+ll.append(1);
+ll.append(2);
+ll.append(3);
+ll.deleteNodeBeforeTarget(3);
+ll.display();
