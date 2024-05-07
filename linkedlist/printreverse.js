@@ -42,6 +42,8 @@ class LinkedList {
     //         prev=current
     //         current=newNode
     //     }
+    // this.head = prev; // Update the head pointer to the new head of the reversed list
+
     // }
 }
 
