@@ -1,21 +1,21 @@
-// Function A: Generates even numbers up to n
-function generateEven(n) {
-    if (n === 0) {
-        return;
+function generateEven(n)
+{
+    if(n===0)
+    {
+        return 
     }
-    console.log(n * 2);
-    generateOdd(n - 1); // Call function B
+    console.log(n*2)
+    generateEven(n-1)
 }
 
-// Function B: Generates odd numbers up to n
-function generateOdd(n) {
-    if (n === 0) {
-        return;
+function generateOdd(n)
+{
+    if(n===0)
+    {
+        return 
     }
-    console.log(n * 2 - 1);
-    generateEven(n - 1); // Call function A
+    console.log(n*2-1)
+    generateOdd(n-1)
 }
-
-// Example usage:
-console.log("Even numbers up to 5:");
-generateEven(5);
+const n=5
+generateEven(n)

@@ -17,7 +17,7 @@ class LinkedList
     }
     append(data)
     {
-        const newNode=new Node(data)
+        const  newNode=new Node(data)
         if(!this.head)
             {
                 this.head=newNode
@@ -29,23 +29,29 @@ class LinkedList
                 this.tail.next=newNode
                 this.tail=newNode
             }
-
     }
-    deleteAtEnd()
+
+    deleteBeforeTarget(target)
     {
         if(!this.head)
             {
                 return
             }
-            if(!this.head.next)
+            let current=this.head
+            while (current && current.data!==target)
                 {
-                    this.head=null
-                    this.tail=null
-
+                    current=current.next
                 }
-                let secondLast=this.tail.prev
-                secondLast.next=null
-                this.tail=secondLast
+                if(current.prev && current.prev.prev)
+                    {
+                        current.prev.prev.next=current
+                        current.prev=current.prev.prev
+                    }
+                    else
+                    {
+                        this.head=current
+                        current.prev=null
+                    }
     }
     display()
     {
@@ -56,10 +62,13 @@ class LinkedList
                 current=current.next
             }
     }
+
+
 }
-const ll=new LinkedList()
+
+const  ll=new LinkedList()
 ll.append(1)
 ll.append(2)
 ll.append(3)
-ll.deleteAtEnd()
-ll.display( )
+ll.deleteBeforeTarget(3)
+ll.display()

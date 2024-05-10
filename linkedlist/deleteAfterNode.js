@@ -32,7 +32,7 @@ class LinkedList {
       let current=this.head
       while(current.next)
       {
-          if(current.data===target && current.next)
+          if(current.data===target)
           {
               current.next=current.next.next
               return 

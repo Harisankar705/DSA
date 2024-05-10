@@ -1,21 +1,19 @@
-function findMax(arr, start, end) {
-    // Base case: If the array contains only one element, return it
-    if (start === end) {
-        return arr[start];
+function findMax(arr, index, max) {
+    // Base case: if index reaches the end of the array
+    if (index === arr.length) {
+        return max;
     }
-    
-    // Divide: Split the array into two halves
-    const mid = Math.floor((start + end) / 2);
-    
-    // Conquer: Recursively find the maximum element in each half
-    const maxLeft = findMax(arr, start, mid);
-    const maxRight = findMax(arr, mid + 1, end);
-    
-    // Combine: Return the maximum of the maximum elements from each half
-    return Math.max(maxLeft, maxRight);
+
+    // Update max if the current element is greater
+    if (arr[index] > max) {
+        max = arr[index];
+    }
+
+    // Recursive call with next index
+    return findMax(arr, index + 1, max);
 }
 
 // Example usage:
-const arr = [3, 5, 1, 8, 4, 9, 2];
-const maxElement = findMax(arr, 0, arr.length - 1);
+const array = [3, 7, 2, 9, 5];
+const maxElement = findMax(array, 0, array[0]);
 console.log("Maximum element:", maxElement);
