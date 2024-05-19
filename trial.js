@@ -22,4 +22,9 @@ var getCommon=function(nums1,nums2)
     }
     return common
 
+
 }
+
+const num1=[1,2,3,4]
+const num2=[4,5,6,7]
+console.log(getCommon(num1,num2))

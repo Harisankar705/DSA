@@ -30,19 +30,14 @@ class LinkedList
             current.next=newNode
         }
     }
-        printAsc()
-        {
-            let current=this.head
-            const elements=[]
-            while(current)
-            {
-                elements.push(current.data)
-                current=current.next
-            }
-            elements.sort((a,b)=>b-a)
-                    console.log(elements.join()); // Print the sorted elements
+        printAsc() {
+    let current = this.head;
+    while (current) {
+        console.log(current.data);
+        current = current.next;
+    }
+}
 
-        }
         
         
     }

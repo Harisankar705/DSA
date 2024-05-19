@@ -1,17 +1,24 @@
-    function fibonacciUptoLimit(limit)
-    {
-        let fibSeries=[1,1]
-        let fibCurr=1
-        let fibPrev=1
-        while(fibCurr<=limit)
+function fibonocciUptoLimit(limit)
+{
+    let fibSeries=[1,1]
+    let fibPrev=1
+    let fibCurr=1
+    while(true)
         {
             const temp=fibCurr
             fibCurr+=fibPrev
             fibPrev=temp
-            fibSeries.push(fibCurr)
+            if(limit<fibCurr)
+                {
+                    break
+                }
+                fibSeries.push(fibCurr)
+                
+
         }
         return fibSeries
-    }
+        
 
-    const limit=10
-    console.log(fibonacciUptoLimit(limit))
+}
+const n=10
+console.log(fibonocciUptoLimit(n))

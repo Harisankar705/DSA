@@ -37,10 +37,10 @@ class LinkedList {
     //     let prev=null
     //     while(current!==null)
     //     {
-    //         const newNode=current.next
+    //         const temp=current.next
     //         current.next=prev
     //         prev=current
-    //         current=newNode
+    //         current=temp
     //     }
     // this.head = prev; // Update the head pointer to the new head of the reversed list
 
