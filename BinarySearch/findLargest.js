@@ -11,7 +11,7 @@ function findLarest(arr)
             left=middle+1
         }
         else
-        {
+        {   
             right=middle
         }
     }

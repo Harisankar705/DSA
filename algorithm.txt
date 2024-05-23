@@ -8,4 +8,4 @@ Output:The maximum element in the array
 -For each element in the array we check whether it is greater than maxElement
 -If arr[i] is greater than maxElement,we update maxElement as arr[i]
 3.After iterating through the entire array maxElement will contain the maximum element
-4.Return maxElement as Output
+4.Return maxElement as Output   

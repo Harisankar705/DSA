@@ -31,8 +31,8 @@ class LinkedList {
         }
 
         let current = this.head;
-        while (current.next && current.next.data !== target) {
-            if (current.next.next && current.next.next.data === target) {
+        while (current.next && current.next.next) {
+            if ( current.next.next.data === target) {
                 current.next = current.next.next;
                 return;
             }

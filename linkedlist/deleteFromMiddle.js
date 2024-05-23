@@ -45,14 +45,7 @@ class LinkedList
                     slow=slow.next
                     fast=fast.next.next
                 }
-                if(!prev)
-                    {
-                        this.head=slow.next
-                    }
-                    else
-                    {
-                        prev.next=slow.next
-                    }
+                prev.next=slow.next
     }
 
     display()
