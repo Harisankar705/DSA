@@ -1,53 +1,45 @@
-class Node
-{
-    constructor(data)
-    {
-        this.data=data
-        this.next=null
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
     }
 }
 
-class LinkedList
-{
-    constructor()
-    {
-        this.head=null
+class LinkedList {
+    constructor() {
+        this.head = null;
     }
-    append(data)
-    {
-        const newNode=new Node(data)
-        if(!this.head)
-        {
-            this.head=newNode
-        }
-        else
-        {
-            let current=this.head
-            while(current.next)
-            {
-                current=current.next
+
+    append(data) {
+        const newNode = new Node(data);
+        if (!this.head) {
+            this.head = newNode;
+        } else {
+            let current = this.head;
+            while (current.next) {
+                current = current.next;
             }
-            current.next=newNode
+            current.next = newNode;
         }
     }
-        printAsc() {
-    let current = this.head;
-    while (current) {
-        console.log(current.data);
-        current = current.next;
-    }
+
+   printAsc()
+   {
+    let element=[]
+    let current=this.head
+    while(current)
+        {
+            element.push(current.data)
+            current=current.next
+        }
+        element.sort((a,b)=>a-b)
+        console.log(element.join(' '))
+   }
+    
 }
 
-        
-        
-    }
-    
- 
-    
-    
-
-   const linkedList=new LinkedList()
-    linkedList.append(1)
-    linkedList.append(2)
-    linkedList.append(3)
-    linkedList.printAsc()
+const linkedList = new LinkedList();
+linkedList.append(134);
+linkedList.append(22);
+linkedList.append(33);
+linkedList.printAsc();
