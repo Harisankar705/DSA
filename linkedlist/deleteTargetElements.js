@@ -63,6 +63,6 @@ linkedlist.append(13);
 console.log("Original list:");
 linkedlist.display();
 
-linkedlist.deleteTarget(11);
+linkedlist.deleteTarget(13);
 console.log("List after deleting 11:");
 linkedlist.display();
