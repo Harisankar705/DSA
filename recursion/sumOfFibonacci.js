@@ -1,12 +1,17 @@
-function sumOfFibonanci(limit,fibPrev=0,fibCurr=1,sum=0)
+function fibonocci(n)
 {
-    if(fibCurr>limit)
+    if(n<=1)
     {
-        return sum
+        return n
     }
-    sum+=fibCurr
-    return sumOfFibonanci(limit,fibCurr,fibPrev+fibCurr,sum)
+    return fibonocci(n-1)+fibonocci(n-2)
 }
-console.log(sumOfFibonanci(10)); // Output: 23 (1 + 1 + 2 + 3 + 5 + 8 = 20)
-
-        
+function sumOfFiboncci(n)
+{
+    if(n<1)
+    {
+        return 0
+    }
+    return fibonocci(n)+sumOfFiboncci(n-1)
+}
+console.log(sumOfFiboncci(5))
