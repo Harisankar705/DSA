@@ -1,20 +1,12 @@
-function printEvenNumber(n)
-{
-    if(n<=1)
-        {
-            if(n===0)
-                {
-                    console.log(n)
-                    return
-                }
-        }
-        if(n%2===0)
-            {
-                console.log(n)
-            }
-            printEvenNumber(n-1)
-            
-
+const printEven=(n)=>{
+    if(n<=0)
+    {
+        return 
+    }
+    if(n%2===0)
+    {
+        console.log(n)
+    }
+    printEven(n-1)
 }
-
-printEvenNumber(10)
+printEven(10)
