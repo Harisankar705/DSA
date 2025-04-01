@@ -1,24 +1,13 @@
-function fibonocciUptoLimit(limit)
+function fibonocci(n)
 {
-    let fibSeries=[1,1]
-    let fibPrev=1
-    let fibCurr=1
-    while(true)
-        {
-            const temp=fibCurr
-            fibCurr+=fibPrev
-            fibPrev=temp
-            if(limit<fibCurr)
-                {
-                    break
-                }
-                fibSeries.push(fibCurr)
-                
-
-        }
-        return fibSeries
-        
-
+    if(n<=1)return n
+    return fibonocci(n-1)+fibonocci(n-2)
 }
-const n=10
-console.log(fibonocciUptoLimit(n))
+function printUptoLimit(limit)
+{
+    for(let i=0;i<limit;i++)
+    {
+        console.log(fibonocci(i))
+    }
+}
+printUptoLimit(10)
